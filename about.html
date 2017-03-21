@@ -1,0 +1,81 @@
+---
+layout: page
+title: "About"
+description: "Hey, this is Zlc."
+header-img: "img/about-bg.jpg"
+---
+
+<!-- Language Selector -->
+<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <!--copied from markdown -->
+    <blockquote><p>to create world by code</p></blockquote>
+
+    <p>Hey，我是<strong>曾玲超</strong>。准备开始记录自己程序员生涯了哦，要知道一个好的程序员一定也会是个优秀的作家，还没有写出作品就莫名自信的我，hhhh~</p>
+
+   <!--  <h5>Talks</h5>
+
+    <ul>
+    <li><a href="//huangxuan.me/2016/11/20/sw-101-gdgdf/">Service Worker 101</a> · GDG DevFest 北京 2016</li>
+    <li><a href="//huangxuan.me/2016/10/20/pwa-qcon2016/">Progressive Web Apps 复兴序章</a> · QCon 上海 2016</li>
+    <li><a href="//huangxuan.me/2016/06/05/pwa-in-my-pov/">Progressive Web App 之我见</a> · 2016</li>
+    <li><a href="//huangxuan.me/2015/12/28/css-sucks-2015/">CSS Still Sucks 2015</a> · 2015</li>
+    <li><a href="//huangxuan.me/2015/07/09/js-module-7day/">JavaScript 模块化七日谈</a> · 2015</li>
+    </ul> -->
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    <blockquote><p>Yet another Web Developer. <br>
+    Yet another Life-long Designer.</p></blockquote>
+
+    <p>Hi, I am <strong>Zeng lingchao(曾玲超)</strong>，you can call me <strong>Planes</strong>. I'm an engineer &amp; a Android Developer</p>
+
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
