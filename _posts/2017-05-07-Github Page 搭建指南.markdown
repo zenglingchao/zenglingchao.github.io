@@ -2,11 +2,11 @@
 layout:     post
 title:      "Github Page 搭建指南（基础版）"
 subtitle:   " \"GithubPage快速入门基础教程\""
-date:       2017-05-06 12:00:00
+date:       2017-05-07 12:00:00
 author:     "Zlc"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 记录
+    - 记录 GithubPage
 ---
 
 # Github Page 搭建指南（基础版）
