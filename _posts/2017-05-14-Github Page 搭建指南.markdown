@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Github Page 搭建指南（基础版）"
-subtitle:   " \"Hello World, Hello Blog\""
+subtitle:   " \"GithubPage快速入门基础教程\""
 date:       2017-05-06 12:00:00
 author:     "Zlc"
 header-img: "img/post-bg-2015.jpg"
